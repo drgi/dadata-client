@@ -1,4 +1,4 @@
-module github.com/dadata-client
+module github.com/drgi/dadata-client
 
 go 1.19
 

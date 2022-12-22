@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/url"
 
-	"github.com/dadata-client/api/suggest"
+	"github.com/drgi/dadata-client/api/suggest"
 )
 
 func ExampleNewClient() {

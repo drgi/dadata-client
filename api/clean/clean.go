@@ -3,7 +3,7 @@ package clean
 import (
 	"context"
 
-	"github.com/dadata-client/api/model"
+	"github.com/drgi/dadata-client/api/model"
 )
 
 type (

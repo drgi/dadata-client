@@ -3,11 +3,11 @@ package dadata
 import (
 	"net/url"
 
-	"github.com/dadata-client/api/clean"
-	"github.com/dadata-client/api/profile"
-	"github.com/dadata-client/api/stat"
-	"github.com/dadata-client/api/suggest"
-	"github.com/dadata-client/client"
+	"github.com/drgi/dadata-client/api/clean"
+	"github.com/drgi/dadata-client/api/profile"
+	"github.com/drgi/dadata-client/api/stat"
+	"github.com/drgi/dadata-client/api/suggest"
+	"github.com/drgi/dadata-client/client"
 )
 
 const (

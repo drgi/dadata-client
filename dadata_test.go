@@ -8,7 +8,7 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/dadata-client/api/suggest"
+	"github.com/drgi/dadata-client/api/suggest"
 )
 
 type (
