@@ -33,7 +33,6 @@ func TestParty(t *testing.T) {
 	defer testPartyReader.Close()
 
 	model := Party{}
-
 	err = json.NewDecoder(testPartyReader).Decode(&model)
 	assert.NoError(t, err)
 	assert.Equal(t, 2, len(model.Founders))
