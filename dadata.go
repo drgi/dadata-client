@@ -3,11 +3,11 @@ package dadata
 import (
 	"net/url"
 
-	"github.com/ekomobile/dadata/v2/api/clean"
-	"github.com/ekomobile/dadata/v2/api/profile"
-	"github.com/ekomobile/dadata/v2/api/stat"
-	"github.com/ekomobile/dadata/v2/api/suggest"
-	"github.com/ekomobile/dadata/v2/client"
+	"github.com/dadata-client/api/clean"
+	"github.com/dadata-client/api/profile"
+	"github.com/dadata-client/api/stat"
+	"github.com/dadata-client/api/suggest"
+	"github.com/dadata-client/client"
 )
 
 const (
