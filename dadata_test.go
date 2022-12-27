@@ -33,6 +33,21 @@ func (s *ApiSuggestIntegrationTest) TestAddress() {
 	s.NotEmpty(res)
 }
 
+func (s *ApiSuggestIntegrationTest) TestCoords() {
+	api := NewSuggestApi()
+	lat := 55.601983
+	lon := 37.359486
+	params := suggest.RequestParams{
+		Count: 10,
+		Lat:   &lat,
+		Lon:   &lon,
+	}
+	res, err := api.Coords(context.Background(), &params)
+
+	s.NoError(err)
+	s.NotEmpty(res)
+}
+
 func (s *ApiSuggestIntegrationTest) TestBank() {
 	api := NewSuggestApi()
 	params := suggest.RequestParams{

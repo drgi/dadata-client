@@ -1,12 +1,6 @@
 # Client for DaData.ru
 
-Forked from https://github.com/webdeskltd/dadata.
-
-
-[![Build Status](https://travis-ci.org/ekomobile/dadata.svg)](https://travis-ci.com/ekomobile/dadata)
-[![GitHub release](https://img.shields.io/github/release/ekomobile/dadata.svg)](https://github.com/ekomobile/dadata/releases)
-[![Go Report Card](https://goreportcard.com/badge/github.com/ekomobile/dadata)](https://goreportcard.com/report/github.com/ekomobile/dadata/v2)
-[![GoDoc](https://godoc.org/github.com/ekomobile/dadata/v2?status.svg)](https://godoc.org/github.com/ekomobile/dadata/v2)
+Forked from github.com/ekomobile/dadata/v2.
 
 DaData API v2
 
@@ -14,38 +8,9 @@ Implemented [Clean](https://dadata.ru/api/clean/) and [Suggest](https://dadata.r
 
 ## Installation
 
-`go get github.com/ekomobile/dadata/v2`
+`go get github.com/drgi/dadata-client`
 
-## Usage
-```go
-import (
-	"context"
-	"fmt"
-
-	"github.com/ekomobile/dadata/v2"
-	"github.com/ekomobile/dadata/v2/api/suggest"
-)
-
-func DaDataExample()  {
-	api := dadata.NewSuggestApi()
-
-	params := suggest.RequestParams{
-		Query: "ул Свободы",
-	}
-
-	suggestions, err := api.Address(context.Background(), &params)
-	if err != nil {
-		return
-	}
-
-	for _, s := range suggestions {
-		fmt.Printf("%s", s.Value)
-	}
-}
-```
-
-
-## Configuration 
+## Configuration
 
 ### Credentials
 
@@ -64,7 +29,6 @@ creds := client.Credentials{
 api := NewSuggestApi(client.WithCredentialProvider(&creds))
 ```
 
-
 ### HTTP client
 
 HTTP client may be overridden with custom one:
@@ -75,6 +39,6 @@ httpClient := &http.Client{}
 api := NewSuggestApi(WithHttpClient(httpClient))
 ```
 
-
 ## Licence
+
 MIT see [LICENSE](LICENSE)

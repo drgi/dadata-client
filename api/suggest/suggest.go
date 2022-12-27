@@ -31,6 +31,17 @@ func (a *Api) Address(ctx context.Context, params *RequestParams) (ret []*Addres
 	return
 }
 
+// Coords try to return suggest addresses by params
+func (a *Api) Coords(ctx context.Context, params *RequestParams) (ret []*AddressSuggestion, err error) {
+	var result = &AddressResponse{}
+	err = a.Client.Post(ctx, "geolocate/address", params, result)
+	if err != nil {
+		return
+	}
+	ret = result.Suggestions
+	return
+}
+
 // Bank try to return suggest banks by params
 func (a *Api) Bank(ctx context.Context, params *RequestParams) (ret []*BankSuggestion, err error) {
 	var result = &BankResponse{}

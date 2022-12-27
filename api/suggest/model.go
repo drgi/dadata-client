@@ -47,6 +47,9 @@ type (
 
 		FromBound *Bound `json:"from_bound"`
 		ToBound   *Bound `json:"to_bound"`
+
+		Lat *float64 `json:"lat"`
+		Lon *float64 `json:"lon"`
 	}
 
 	// AddressResponse result slice for address suggestions

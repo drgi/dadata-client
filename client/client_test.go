@@ -48,12 +48,14 @@ func ExampleCredentials() {
 	api := suggest.Api{
 		Client: NewClient(endpointUrl, WithCredentialProvider(&creds)),
 	}
-
+	lat := 55.601983
+	lon := 37.359486
 	params := suggest.RequestParams{
-		Query: "ул Свободы",
+		Lat: &lat,
+		Lon: &lon,
 	}
 
-	suggestions, err := api.Address(context.Background(), &params)
+	suggestions, err := api.Coords(context.Background(), &params)
 	if err != nil {
 		return
 	}
